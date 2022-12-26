@@ -1,0 +1,28 @@
+
+Container - 
+    - Software package with its own
+        - Run-time environment with Variables and Commands
+        - Application code
+        - dependencies
+    - Based on OS virtualization which does not require a OS to run the software
+
+Docker - 
+    - Company that specializes in automating the deployment of containers 
+
+Docker image 
+    - Blueprint of container that contains details on how to construct and operate the container
+    - Defined by a Dockerfile
+
+Docker container   
+    - Runnable instance of Docker image
+    - Essentially its an isolated process
+        - Runs separately from other process on the machine
+
+Images 
+    - Images are made of several layers. Starting from the bottom
+        - Base layer is typically Parent Image
+            - Say a linux distribution that might come with its own environment
+            - you can find the parent images from https://hub.docker.com 
+        - Source Code 
+        - Dependencies
+
