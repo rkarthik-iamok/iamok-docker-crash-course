@@ -45,3 +45,5 @@ Docker Commands
 // Volumes options are invoked when the container is run 
     $   docker run -v <AbosolutePathOfSource>:<AbsolutePathinContainer> -v <PathinContainerstobeIgnored>
     $   docker run --name mywebapp_api_v1_c1 -p 4000:4000 --rm -d -v /Users/karthikramakrishnan/Documents/Code-Rampup/docker/docker_crash_course:/app -v /app/node_modules mywebapp:v1
+
+// Docker Compose
