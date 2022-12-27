@@ -26,3 +26,5 @@ Images
         - Source Code 
         - Dependencies
 
+Docker Layer Caching
+    - Docker caches images upon use and reduces the time for the next build

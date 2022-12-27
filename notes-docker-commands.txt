@@ -1,1 +1,28 @@
-Docker Commands
+Docker Commands 
+
+// List all Docker images
+    $   docker images
+
+
+// Run an image with options
+    $   docker run <options> <imagename>
+    $   docker run --name  myapp_c1 myapp
+    $   docker run --name myapp_c1 -p 4000:4000 -d myapp
+
+    <imagenamne> - myapp
+    <containername> - myapp_c1
+    <Port bindings> - GuestHostPort:ContainerPort
+    <Detached mode> - -d                            // Terminal is not blocked while running the container
+
+
+// List Docker containers
+    $   docker ps 
+
+// Stop containers
+    $   docker stop <containername>; or 
+    $   docker stop <containerid>           // obtained from docker ps
+
+// Start containers
+    $   docker start <containername>; or
+    $   docker start <containerid>;
+
