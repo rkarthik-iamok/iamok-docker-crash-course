@@ -26,3 +26,8 @@ Docker Commands
     $   docker start <containername>; or
     $   docker start <containerid>;
 
+// Docker compose 
+    $   docker-compose up
+
+    $   docker-compose down --rmi all -v    // Remove all images and volumes upon Stopping the containers
+

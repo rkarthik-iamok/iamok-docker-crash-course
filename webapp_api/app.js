@@ -25,6 +25,11 @@ app.get('/', (req, res)=> {
             name: "Roshi",
             rank: "Jonin"
         },
+        {
+            id: "5",
+            name: "Kakashi",
+            rank: "Tanto-Jonin"
+        },
     ]
 
     // Set the Content-Type header

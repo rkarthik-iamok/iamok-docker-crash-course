@@ -1,0 +1,12 @@
+version: "2.7"
+services:
+  webapp_api:
+    build: ./webapp_api
+    image: webapp_api:v3
+    container_name: webapp_api_v3_c1
+    ports:
+      - '4000:4000'
+    volumes:
+      - ./webapp_api:/app
+      - ./app/node_modules
+    
