@@ -8,11 +8,13 @@ Docker Commands
     $   docker run <options> <imagename>
     $   docker run --name  myapp_c1 myapp
     $   docker run --name myapp_c1 -p 4000:4000 -d myapp
+    $   docker run --name myapp_c1 -p 4000:4000 -d --rm myapp
 
     <imagenamne> - myapp
     <containername> - myapp_c1
-    <Port bindings> - GuestHostPort:ContainerPort
-    <Detached mode> - -d                            // Terminal is not blocked while running the container
+    -p // For Port bindings - GuestHostPort:ContainerPort
+    -d // Terminal is not blocked while running the container
+    --rm // Delete and remove the container once the container is stopped
 
 
 // List Docker containers
@@ -26,3 +28,20 @@ Docker Commands
     $   docker start <containername>; or
     $   docker start <containerid>;
 
+// Removing Images
+    $   docker rmi --force <containerimage> 
+
+// Removing containers 
+// use force to remove a running container
+// use v to remove the associated volumes as well
+    $   docker rm --force -v <containername>   
+
+// REMOVE all Containers all Images and all volumes
+// CAUTION: This will remove everything
+    $   docker system prune -a
+
+// Docker Volumes - allows us to map the host's directory into Docker container
+// This way we don't have to create a new image everytime something changes in the source directory
+// Volumes options are invoked when the container is run 
+    $   docker run -v <AbosolutePathOfSource>:<AbsolutePathinContainer> -v <PathinContainerstobeIgnored>
+    $   docker run --name mywebapp_api_v1_c1 -p 4000:4000 --rm -d -v /Users/karthikramakrishnan/Documents/Code-Rampup/docker/docker_crash_course:/app -v /app/node_modules mywebapp:v1
